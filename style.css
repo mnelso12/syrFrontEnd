@@ -1,0 +1,13 @@
+// add your own style on td:hover
+.table-hover>tbody>tr>td:hover, .table-hover>tbody>tr>td:hover{
+        background-color: #f5f5f5!important; // Or any colour you like
+    }
+
+// reset the default bootstrap style on tr:hover
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th{
+        background-color: inherit;
+    }
+
+tbody tr:hover td.hasRowSpan { 
+          background-color: none;   /* or whatever color you want */
+} 

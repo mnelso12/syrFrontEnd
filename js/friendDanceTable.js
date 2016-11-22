@@ -94,7 +94,7 @@ $( document ).ready(function() {
 		$("#choices").css("visibility", "hidden");
 		$("#choices").css("height", "0px");
 		$("#syrInfo").css("visibility", "visible");
-		$("#syrInfo").css("height", "1000px");
+		$("#syrInfo").css("height", "900px");
 	});
 
 	$("#backToChooseFriendAndDance").click(function() {

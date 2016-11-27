@@ -1,0 +1,16 @@
+//page for viewing matches
+
+	//list of friend/dance pairs
+		//list of matches (not suggested matches, actual matches)
+		continue match search
+	
+	//list of my own matches
+
+//upload picture in sign-up
+
+//add friend modal
+
+//edit profile page
+	//can edit anything except netID
+
+delete account

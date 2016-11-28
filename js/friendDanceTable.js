@@ -145,6 +145,8 @@ $( document ).ready(function() {
 	$.displayFriends(mydata);
 	
 	$("#userNetID").text(userProfile["userInfo"][0]["netID"]);
+	$("#userName").text(userProfile["userInfo"][0]["name"]);
+	$("#userName2").text(userProfile["userInfo"][0]["name"]);
 
 
 	$("#editProfileLink").click(function () {

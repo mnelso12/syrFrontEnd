@@ -206,39 +206,44 @@ $( document ).ready(function() {
 
 	};
 
+	function addFriend(name, netID, sex, hometown, dorm, year, major, bio) {
+		// POST request for this new friend
 
-	$(document).keypress(function(e) {
-		if(e.which == 13) {
-			if( $("#friendNameInput").val()) {
-				// add new friend to list
-				var newFriendName = $("#friendNameInput").val();
-				var myRow = $.makeRow(newFriendName);
+		// add new friend to friend table
+		var myRow = $.makeRow(name);
+		$(myRow).appendTo("#friendTableBody");
+	};
 
-				// reset input box
-				$(myRow).appendTo("#friendTableBody");
-				$("#friendNameInput").val('');
-				$("#friendNetIDInput").val('');
-				$("#friendInput").css("visibility", "hidden");	
-				$("#friendInput").css("height", "0px");	
+	$("#addFriendSave").click( function() {
+		var name = $("#friendName").val();
+		var netID = $("#friendNetID").val();
+		var bio = $("#friendBio").val();
+		var hometown = $("#friendHometown").val();
+		var sex = $("#friendSex").val();
+		var major = $("#friendMajor").val();
+		var dorm = $("#friendDorm").val();
+		var year = $("#friendYear").val();
 
-			}
-		}
+		addFriend(name, netID, sex, hometown, dorm, year, major, bio);
+
+		$("#friendName").val('');
+		$("#friendNetID").val('');
+		$("#friendBio").val('');
+		$("#friendHometown").val('');
+		$("#friendSex").val('');
+		$("#friendMajor").val('');
+		$("#friendDorm").val('');
+		$("#friendYear").val('');
 	});
 
-
-
+	
+	
 	$("#friendTableBody").on('click', 'tr', function() {
 		console.log($(this).text());
 		chosenFriend = $(this).text();
 		var selected = $(this).hasClass("highlight");
 		$("#personBeingSetUp").text(chosenFriend);
 		$("#friendTable tr").removeClass("highlight");
-
-		// adding new friend
-		if ($(this).attr('id') == 'addFriend') {
-			$("#friendInput").css("visibility", "visible");	
-			$("#friendInput").css("height", "150px");	
-		}
 
 		if(!selected)
 			$(this).addClass("highlight");

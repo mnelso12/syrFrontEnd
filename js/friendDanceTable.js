@@ -216,6 +216,25 @@ $( document ).ready(function() {
 		$(myRow).appendTo("#friendTableBody");
 	};
 
+
+	///////////// this is new ///////////////
+	function addExistingFriend(netID) {
+		// POST request for this new friend
+
+		// add new friend to friend table
+		var myRow = $.makeRow('existing friends name here');
+		$(myRow).appendTo("#friendTableBody");
+	};
+
+	$("#findFriendSave").click( function() {
+		var netID = $("#findFriendNetID").val();
+
+		addExistingFriend(netID);
+
+		$("#findFriendNetID").val('');
+	});
+	///////////// til here  ///////////////
+
 	$("#addFriendSave").click( function() {
 		var name = $("#friendName").val();
 		var netID = $("#friendNetID").val();
